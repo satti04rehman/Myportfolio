@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abdul Rehman — Portfolio</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS (scroll animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header / Nav -->
+    <header>
+        <nav class="container nav">
+            <a class="logo" href="#home">Abdul<span>Rehman</span></a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <i class="fa fa-bars"></i>
+      </button>
+
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-inner" data-aos="fade-up">
+            <div class="hero-text">
+                <h1>Hello — I'm <span id="typed-name"></span></h1>
+                <p class="lead">I build responsive, accessible, and visually-focused websites & applications.</p>
+                <div class="hero-ctas">
+                    <a class="btn" href="#projects">View Projects</a>
+                    <a class="btn btn-outline" href="#contact">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-photo" aria-hidden="true">
+                <!-- Replace src with your photo if you want -->
+                <img src="C:\Users\Abdulrehman\Desktop\portfolio\assests\abdulrehman.jpg" alt="Profile photo of Abdul Rehman">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about" data-aos="fade-right">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I’m <strong>Abdul Rehman</strong>, a passionate and detail-oriented Software Engineering student
+                        from Rawalpindi, Pakistan. I specialize in building modern, responsive web applications using <em>HTML, CSS, JavaScript</em>                        and I have experience with
+                        <em>C++</em>, <em>Python</em>, and databases. I enjoy turning ideas into clean, usable interfaces
+                        and efficient code.
+                    </p>
+
+                    <p>
+                        I focus on practical solutions with attention to performance, accessibility, and user experience. I am currently pursuing
+                        my BS in Software Engineering and continuously learning new libraries, frameworks, and best practices.
+                    </p>
+
+                    <h3>Quick Facts</h3>
+                    <ul class="about-info">
+                        <li><strong>Full Name:</strong> Abdul Rehman</li>
+                        <li><strong>Location:</strong> Rawalpindi, Pakistan</li>
+                        <li><strong>Email:</strong> <a href="mailto:satti04rehman@gmail.com">satti04rehman@gmail.com</a></li>
+                        <li><strong>Phone:</strong> +92 316 5662622</li>
+                        <li><strong>Current study:</strong> BS Software Engineering — Arid Agriculture University Rawalpindi
+                            (5th semester)</li>
+                    </ul>
+                </div>
+
+                <div class="about-extras">
+                    <div class="card">
+                        <h4>What I do</h4>
+                        <p>Front-end development, responsive UI, small web games, and prototype systems.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Tools</h4>
+                        <p>VS Code · Git · Replit · Chrome DevTools · Figma (basic)</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Goal</h4>
+                        <p>Become a full-stack engineer and build performant, delightful user experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section education" data-aos="fade-left">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>BS Software Engineering</h4>
+                    <span class="muted">2023 — Present</span>
+                    <p>Arid Agriculture University Rawalpindi — Currently enrolled (4th Semester)</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>FSc Pre-Engineering</h4>
+                    <span class="muted">2021 — 2023</span>
+                    <p>ICB G6/3 College Islamabad — 1st Division</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Matriculation (Science)</h4>
+                    <span class="muted">2019 — 2021</span>
+                    <p>FG Public School, Rawalpindi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section skills" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill">
+                    <h5>HTML</h5>
+                    <div class="progress"><span style="width:90%"></span></div>
+                </div>
+                <div class="skill">
+                    <h5>CSS / Tailwind</h5>
+                    <div class="progress"><span style="width:85%"></span></div>
+                </div>
+                <div class="skill">
+                    <h5>JavaScript</h5>
+                    <div class="progress"><span style="width:80%"></span></div>
+                </div>
+                <div class="skill">
+                    <h5>C++</h5>
+                    <div class="progress"><span style="width:75%"></span></div>
+                </div>
+                <div class="skill">
+                    <h5>Python</h5>
+                    <div class="progress"><span style="width:70%"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Replace these cards with your project details & links -->
+                <article class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive developer portfolio built with HTML, CSS, and JavaScript.</p>
+                    <a class="link" href="#" target="_blank" rel="noopener">View project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>TIC TAC TOE (Web)</h3>
+                    <p>A small browser game built using HTML canvas and JavaScript.</p>
+                    <a class="https://satti04rehman.github.io/mygame/" href="#" target="_blank" rel="noopener">View project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>E-commerce Prototype</h3>
+                    <p>Simple product listing & cart demo using vanilla JS and localStorage.</p>
+                    <a class="https://satti04rehman.github.io/AR-STORE/" href="#" target="_blank" rel="noopener">View project</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="lead">I’m open to internships, collaborations, and freelance work. Reach out on any platform below:</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <a href="mailto:satti04rehman@gmail.com" class="contact-link">satti04rehman@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>WhatsApp</h4>
+                    <!-- international format: 92 for Pakistan + your number without leading 0 -->
+                    <a href="https://wa.me/923165662622" class="contact-link" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                </div>
+
+                <div class="contact-card full">
+                    <h4>Social</h4>
+                    <div class="social-icons">
+                        <!-- Replace the hrefs below with your actual profile URLs -->
+                        <a href="https://www.linkedin.com/in/abdul-r-a9b807325/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/satti04rehman" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/abdulrehman47577/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/923165662622" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:satti04rehman@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Abdul Rehman — Built with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+    
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <!-- Robot Canvas -->
+<canvas id="robotCanvas"></canvas>
+
+<!-- Three.js & GLTF Loader -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="robot.js"></script>
+
+    <script>
+        AOS.init({ once: true, duration: 800 });
+        new Typed('#typed-name', {
+            strings: ['Abdul Rehman', 'a Web Developer', 'a Designer'],
+            typeSpeed: 70,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
+    
+</body>
+
+</html>

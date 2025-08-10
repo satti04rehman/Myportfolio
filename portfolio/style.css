@@ -1,0 +1,143 @@
+/* ------------------------------
+  Basic reset & variables
+   ------------------------------ */
+:root{
+  --bg:#0f0f0f;
+  --card:#161616;
+  --muted:#9a9a9a;
+  --accent:#ff4c4c;
+  --glass: rgba(255,255,255,0.03);
+  --container: 1100px;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: 'Poppins', sans-serif;
+  background:var(--bg);
+  color:#f7f7f7;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* ------------------------------
+  Layout utilities
+   ------------------------------ */
+.container{
+  width:90%;
+  max-width:var(--container);
+  margin:0 auto;
+}
+
+/* ------------------------------
+  Header / Navigation
+   ------------------------------ */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.15));backdrop-filter: blur(4px);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-size:1.15rem;font-weight:700;color:#fff;text-decoration:none}
+.logo span{color:var(--accent);margin-left:6px}
+
+/* nav menu */
+.nav-menu{display:flex;gap:18px;list-style:none}
+.nav-menu li a{color:#ddd;text-decoration:none;padding:8px 6px;border-radius:6px;transition:all .18s}
+.nav-menu li a:hover{color:#fff;background:var(--glass)}
+
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:20px}
+
+/* ------------------------------
+  Hero
+   ------------------------------ */
+.hero{min-height:80vh;display:flex;align-items:center;padding-top:70px;padding-bottom:40px}
+.hero-inner{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:center}
+.hero-text h1{font-size:2rem;margin-bottom:10px}
+.lead{color:var(--muted);margin-bottom:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;transition:transform .15s}
+.btn:hover{transform:translateY(-3px)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+
+/* hero photo */
+.hero-photo img{width:100%;border-radius:14px;display:block;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+
+/* ------------------------------
+  Sections
+   ------------------------------ */
+.section{padding:80px 0}
+.section-title{font-size:1.5rem;margin-bottom:20px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+.about-info{list-style:none;color:var(--muted);margin-top:12px}
+.about-info li{margin:8px 0}
+.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,1,0.6)}
+.card h4{margin-bottom:8px}
+
+/* Education / timeline */
+.timeline{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:18px auto 0}
+.timeline-item{background:var(--card);padding:16px;border-radius:10px;border-left:4px solid var(--accent)}
+.timeline-item .muted{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:800px;margin:0 auto}
+.skill h5{margin-bottom:8px}
+.progress{background:#fff;height:12px;border-radius:8px;overflow:hidden}
+.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#ff6b6b)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project-card{background:var(--card);padding:18px;border-radius:10px;transition:transform .18s,box-shadow .18s}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+.project-card .link{display:inline-block;margin-top:12px;color:var(--accent);text-decoration:none}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto}
+.contact-card{background:var(--card);padding:18px;border-radius:10px;text-align:left}
+.contact-card.full{grid-column: span 3}
+.contact-link{color:#fff;text-decoration:none}
+.social-icons{display:flex;gap:12px;margin-top:8px}
+.social-icons a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:transparent;color:#fff;font-size:18px;text-decoration:none;transition:all .15s}
+.social-icons a:hover{transform:translateY(-4px);color:var(--accent)}
+
+/* Footer */
+.footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted)}
+
+/* ------------------------------
+  Responsive
+   ------------------------------ */
+@media (max-width: 1000px){
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr 300px}
+}
+
+@media (max-width: 760px){
+  .nav-toggle{display:block}
+  .nav-menu{position:absolute;right:18px;top:64px;display:flex;flex-direction:column;background:#0b0b0b;border-radius:10px;padding:10px;gap:8px;min-width:160px;box-shadow:0 8px 30px rgba(0,0,0,0.6);display:none}
+  .nav-menu.show{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:20px}
+  .projects-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .contact-card.full{grid-column:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero-photo{order:-1;text-align:center}
+  .hero-photo img{max-width:260px;margin:0 auto}
+  .hero{padding-top:80px}
+}
+
+/* small screens */
+@media (max-width:420px){
+  .logo{font-size:1rem}
+  .hero-text h1{font-size:1.25rem}
+  .section{padding:60px 0}
+  .nav-menu{right:10px;top:58px}
+}
+#robotCanvas {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    pointer-events: none; /* So it doesn't block clicks */
+    z-index: 9999;
+}
